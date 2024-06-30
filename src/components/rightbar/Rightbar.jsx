@@ -1,6 +1,8 @@
 import "./Rightbar.scss"
+import {Users} from "../../dummyData"
+import Online from "../online/Online"
 
-export default function Rightbar() {
+export default function Rightbar(post) {
     return (
         <div className="rightbar">
             <div className="rightbarWrapper">
@@ -13,55 +15,10 @@ export default function Rightbar() {
                 <img className="rightbarAd" src="/assets/rabbit.png" alt="" />
                 <h4 className="rightbarTitle">Online Friends</h4>
                 <ul className="rightbarFriendList">
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Phan Thị Thu Trang</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Tiến Minh</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">NgocAnh Nah</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Tô Thị Bíu</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Minh Anh</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Hoa</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Linh Ngân</span>
-                    </li>
+                    {Users.map((u) => (
+                        <Online key={u.id} user={u}/>
+                    ))}
+                    
                 </ul>
             </div>
         </div>
