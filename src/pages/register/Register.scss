@@ -1,0 +1,91 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loginWrapper {
+        width: 70%;
+        height: 70%;
+        display: flex;
+
+        .loginLeft,
+        .loginRight {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .loginLeft {
+            .loginLogo {
+                font-size: 50px;
+                font-weight: 800;
+                color: #1775ee;
+            }
+
+            .loginDesc {
+                font-style: 24px;
+
+            }
+        }
+
+        .loginRight {
+            .loginBox {
+                height: 400px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .loginInput {
+                    height: 50px;
+                    border-radius: 10px;
+                    border: 1px solid gray;
+                    font-size: 18px;
+                    padding-left: 20px;
+                }
+
+                .loginInput:focus {
+                    border: 2px solid #1775ee;
+                }
+
+                .loginButton,
+                .loginRegisterButton {
+                    height: 50px;
+                    border-radius: 10px;
+                    border: none;
+
+                    color: white;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+
+                .loginButton {
+                    background-color: #1775ee;
+                }
+
+                .loginRegisterButton {
+                    width: 50%;
+                    align-self: center;
+                    background-color: #42b72a;
+                }
+
+                .loginButton:focus {
+                    outline: none;
+
+                }
+
+                .loginForgot {
+                    text-align: center;
+                    color: #1775ee;
+                }
+            }
+        }
+
+    }
+}
