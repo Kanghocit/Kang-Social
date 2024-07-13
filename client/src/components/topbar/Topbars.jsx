@@ -1,11 +1,14 @@
 import './Topbars.scss'
 import { Search, Person, Chat, Notifications } from '@mui/icons-material';
+import {Link} from 'react-router-dom'
 
 export default function Topbar() {
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
-                <span className="logo">Kang-Social</span>
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <span className="logo">Kang-Social</span>
+                </Link>
             </div>
             <div className="topbarCenter">
                 <div className="searchbar">
